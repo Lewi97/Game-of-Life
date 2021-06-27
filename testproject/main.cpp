@@ -9,8 +9,6 @@ constexpr int tile_size = 5;
 constexpr int simWidth = windowWidth / tile_size;
 constexpr int simHeight = windowHeight / tile_size;
 
-sf::RectangleShape tiles[simHeight * simWidth];
-
 bool fps_log = false;
 
 int current[simHeight * simWidth] = { 0 };
@@ -101,7 +99,7 @@ int main()
 		sf::Vertex({0,0}, sf::Color::Red, sf::Vector2f(100, 100))
 	};
 
-	sf::Clock tick; // add tickrate, if elapsed time > 0.2 , updatesim, restart clock
+	sf::Clock tick; // TODO || add tickrate, no idea how though
 	
 	bool horiLine = false;
 	bool vertiLine = false;
@@ -186,7 +184,7 @@ int main()
 
 		if (autoRun) { updateSim(); }
 
-		if (fps_log == true) 
+		if (fps_log) 
 		{
 			dt = fps.restart().asSeconds();
 			LOG(1 / dt);
