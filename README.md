@@ -2,7 +2,7 @@
 Simple game of life simulation written in C++.
 Should work and compile just fine with visual studio.
 
-<h2>Controls</h>
+<h2>Controls</h2>
 Left click place cell
 Right click remove cell
 
